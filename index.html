@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador Ping Pong</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="Icono/Ping Pong.png" type="image/x-icon">
+</head>
+<body>
+
+<div class="players-container">
+  <div class="player" id="player1">
+    <div class="player-header">
+      <h2 id="player1Name" onclick="editPlayerName(1)">Jugador 1</h2>
+    </div>
+    <div class="score" id="score1">0</div>
+    <button onclick="updateScore(1, -1)">-</button>
+    <button onclick="updateScore(1, 1)">+</button>
+    <p class="serve-indicator" id="serveIndicator1"></p>
+  </div>
+
+  <div class="player" id="player2">
+    <div class="player-header">
+      <h2 id="player2Name" onclick="editPlayerName(2)">Jugador 2</h2>
+    </div>
+    <div class="score" id="score2">0</div>
+    <button onclick="updateScore(2, -1)">-</button>
+    <button onclick="updateScore(2, 1)">+</button>
+    <p class="serve-indicator" id="serveIndicator2"></p>
+  </div>
+</div>
+
+<div class="center-container">
+  <button onclick="resetGame()">RESET</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
